@@ -1,0 +1,117 @@
+#time {
+    background-color: rgb(218, 228, 226);
+    color: #c77241;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    padding: 2%;
+}
+
+.nameAuthor {
+    opacity: 0;
+    font-size: 50px;
+}
+
+.authorVisible {
+    animation: fadeOut ease-in 1;
+    animation-fill-mode: forwards;
+    position: absolute;
+    margin-right: 20%;
+    margin-left: 20%;
+    top: 300px;
+    z-index: 1;
+    animation: fadeOut ease-in 1;
+    animation-fill-mode: forwards;
+    position: absolute;
+    right: 100px;
+    top: 300px;
+    animation-duration: 5s;
+}
+
+.container {
+    text-align: center;
+}
+
+.S-Arashu {
+    padding: 5%;
+}
+
+p {
+    font-size: 40px;
+}
+
+.fade-in-1, .fade-in-2, .fade-in-3, .fade-in-4 {
+    opacity: 0;
+    animation: fadeIn forwards;
+    text-align: center;
+}
+
+.fade-in-1 {
+    animation-duration: 13s;
+}
+
+.fade-in-2 {
+    animation-duration: 13.5s;
+}
+
+.fade-in-3 {
+    animation-duration: 14s;
+}
+
+.fade-in-4 {
+    animation-duration: 14.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.container::after {
+    content: "";
+    background: linear-gradient(45deg, #ffffff 48.9%, #c91d1a 49%);
+    background-size: 300% 300%;
+    border-radius: 10px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: calc(100% + 10px);
+    width: calc(100% + 10px);
+    z-index: -1;
+    animation: borderGradient 8s linear both infinite;
+}
+
+@keyframes borderGradient {
+
+    0%,
+    100% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+}
